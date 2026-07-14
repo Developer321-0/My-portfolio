@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+
+  <!-- SEO Meta Tags -->
+  <title>Muhammad Arslan | Portfolio</title>
+  <meta name="description" content="Muhammad Arslan - Software Developer & AI / Automation Engineer. Designing premium systems, n8n automations, and intelligent web applications.">
+  <meta name="keywords" content="Muhammad Arslan, Software Developer, AI Engineer, Automation Engineer, n8n, Python, IST Islamabad, Portfolio">
+  <meta name="author" content="Muhammad Arslan">
+  
+  <!-- Open Graph / Social Media (LinkedIn, WhatsApp, Facebook) -->
+  <meta property="og:title" content="Muhammad Arslan | Portfolio">
+  <meta property="og:description" content="AI & Automation Engineer. Building intelligent systems and workflows.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://YOUR_DEPLOYED_DOMAIN/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://YOUR_DEPLOYED_DOMAIN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Muhammad Arslan | Portfolio">
+  <meta name="twitter:description" content="AI & Automation Engineer. Building intelligent systems and workflows.">
+  <meta name="twitter:image" content="https://YOUR_DEPLOYED_DOMAIN/assets/og-image.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Devicons (for coding language icons) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="dark-mode">
+
+  <!-- Custom Loading Screen -->
+  <div id="loader" class="loader-container">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">M.<span>Arslan</span></a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#timeline" class="nav-link">Timeline</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Light/Dark Mode Toggle -->
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle light/dark mode">
+          <i data-lucide="moon" class="icon-moon"></i>
+          <i data-lucide="sun" class="icon-sun"></i>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open mobile menu">
+          <i data-lucide="menu" id="hamburger-icon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-background-gradient"></div>
+    <canvas id="network-bg" class="network-canvas"></canvas>
+    <div class="hero-container container">
+      <div class="hero-content reveal-on-scroll fade-in">
+        <span class="hero-welcome">Hello, I'm</span>
+        <h1 class="hero-title" id="hero-name">Muhammad Arslan</h1>
+        
+        <!-- Dynamic Typewriter Roles -->
+        <h2 class="hero-subtitle">
+          I build <span id="typewriter-role" class="accent-text"></span><span class="cursor">|</span>
+        </h2>
+        
+        <p class="hero-tagline" id="hero-tagline">
+          Building intelligent, automated systems and high-performance applications.
+        </p>
+        
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary">
+            <span>View Projects</span>
+            <i data-lucide="arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <span>Contact Me</span>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Rounded Glowing Profile Photo -->
+      <div class="hero-image-container reveal-on-scroll scale-in">
+        <div class="profile-glow"></div>
+        <div class="profile-image-frame">
+          <img src="./assets/profile.jpeg" alt="Muhammad Arslan Profile" class="profile-img" id="hero-profile-pic">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Smooth scroll indicator -->
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <span class="scroll-mouse">
+        <span class="scroll-wheel"></span>
+      </span>
+    </a>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="about-section container py-section">
+    <div class="section-header reveal-on-scroll">
+      <span class="subtitle">Get To Know Me</span>
+      <h2 class="section-title">About Me</h2>
+      <div class="accent-line"></div>
+    </div>
+
+    <div class="about-grid">
+      <!-- Short Bio & Bio-Pic -->
+      <div class="about-bio reveal-on-scroll slide-left">
+        <div class="bio-intro-card">
+          <div class="bio-profile-header">
+            <img src="./assets/profile.jpeg" alt="Muhammad Arslan Avatar" class="profile-img-small" id="about-profile-pic">
+            <div>
+              <h3>Muhammad Arslan</h3>
+              <p class="role-desc">Software Developer / AI & Automation Engineer</p>
+            </div>
+          </div>
+          <p id="about-bio-text" class="about-text">
+            I am a BS Computer Science student at the Institute of Space Technology, Islamabad. Passionate about Artificial Intelligence, automation workflows, and building smart web applications, I focus on crafting seamless digital solutions that solve real-world problems.
+          </p>
+        </div>
+      </div>
+
+      <!-- Skills Card Grid -->
+      <div class="about-skills reveal-on-scroll slide-right">
+        <h3 class="skills-title">Core Competencies</h3>
+        <div class="skills-categories" id="skills-container">
+          <!-- Dynamically Rendered Categories -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section (Data-Driven) -->
+  <section id="projects" class="projects-section py-section">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="subtitle">My Work</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="accent-line"></div>
+      </div>
+
+      <!-- Filter Categories or Quick Info -->
+      <p class="projects-intro reveal-on-scroll">
+        A curated selection of intelligent apps, workflow automations, and custom engineering projects.
+      </p>
+
+      <!-- Dynamically populated projects grid -->
+      <div class="projects-grid" id="projects-grid">
+        <!-- Cards injected dynamically via app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience/Education Timeline -->
+  <section id="timeline" class="timeline-section container py-section">
+    <div class="section-header reveal-on-scroll">
+      <span class="subtitle">Academic Journey</span>
+      <h2 class="section-title">Education & Milestones</h2>
+      <div class="accent-line"></div>
+    </div>
+
+    <div class="timeline-wrapper">
+      <div class="timeline-track"></div>
+      <div class="timeline-items" id="timeline-container">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section py-section">
+    <div class="contact-background-glow"></div>
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="subtitle">Get In Touch</span>
+        <h2 class="section-title">Let's Collaborate</h2>
+        <div class="accent-line"></div>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info & Socials -->
+        <div class="contact-info reveal-on-scroll slide-left">
+          <h3>Let's talk about your next project</h3>
+          <p>
+            Whether you want to automate complex business workflows using n8n, integrate robust AI models into your application, or build clean, high-performance web systems — I'm ready to assist.
+          </p>
+
+          <div class="info-list">
+            <div class="info-item">
+              <div class="info-icon"><i data-lucide="mail"></i></div>
+              <div class="info-text">
+                <span>Email Me</span>
+                <a href="mailto:arslank5859@gmail.com" id="info-email">arslank5859@gmail.com</a>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i data-lucide="map-pin"></i></div>
+              <div class="info-text">
+                <span>Location</span>
+                <p>Rawalpindi, Pakistan</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links-container">
+            <h4>Follow / Connect</h4>
+            <div class="social-links">
+              <a href="https://github.com/YOUR_USERNAME" id="social-github" class="social-btn" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME" id="social-linkedin" class="social-btn" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="mailto:arslank5859@gmail.com" id="social-mail" class="social-btn" aria-label="Email">
+                <i data-lucide="mail"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-container reveal-on-scroll slide-right">
+          <form id="contact-form" class="contact-form" action="https://formspree.io/f/mzdlykav" method="POST" autocomplete="off">
+            <div class="form-group">
+              <input type="text" id="name" name="name" class="form-control" required placeholder=" ">
+              <label for="name" class="form-label">Full Name</label>
+              <div class="input-focus-border"></div>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="email" name="email" class="form-control" required placeholder=" ">
+              <label for="email" class="form-label">Email Address</label>
+              <div class="input-focus-border"></div>
+            </div>
+
+            <div class="form-group">
+              <textarea id="message" name="message" class="form-control" rows="5" required placeholder=" "></textarea>
+              <label for="message" class="form-label">Your Message</label>
+              <div class="input-focus-border"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit">
+              <span>Send Message</span>
+              <i data-lucide="send"></i>
+            </button>
+            
+            <div id="form-feedback" class="form-feedback"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="copyright">&copy; <span id="year"></span> Muhammad Arslan. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modular Scripts -->
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
